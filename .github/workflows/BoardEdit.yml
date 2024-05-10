@@ -27,8 +27,8 @@ jobs:
       - name: rodando os testes
         # run: echo Executando os testes de Web do Robot
         run: |
-          robot -d results tests
-
+          robot -d results Supernatural/Board-Edit
+          
       - name: Salvando os resultados dos testes
         uses: actions/upload-artifact@v4
         with:
