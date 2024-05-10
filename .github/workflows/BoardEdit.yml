@@ -5,7 +5,7 @@ on: push
 jobs: 
   
   test:
-    name: teste de front
+    name: Board Edit
     runs-on: windows-latest
 
     steps:
