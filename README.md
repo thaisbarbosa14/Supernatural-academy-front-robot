@@ -17,15 +17,6 @@ Projeto desenvolvido pela equipe Supernatural como parte do treinamento oferecid
 - Abra um terminal.
 - Execute o seguinte comando para instalar as dependências do projeto: pip install robotframework robotframework-seleniumlibrary robotframework-requests
 
-## Como Rodar os Testes
-
-1. Clone este repositório para o seu ambiente local.
-2. Certifique-se de ter o Python instalado.
-3. Abra um terminal na pasta do projeto.
-4. Execute o seguinte comando para instalar as dependências do projeto:
-    pip install -r requirements.txt
-5. Em seguida, execute o comando para rodar os testes: 
-   robot -d results Caminho/Pasta
 
  ## Projeto Desenvolvido por:
 | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/32967494" width=90><br/><sub>Carine Gehlen</sub>](https://github.com/cgehlen)<br/>[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/carinegehlen/)](https://www.linkedin.com/in/carinegehlen/) | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/119118485" width=90><br/><sub>Damião Silva</sub>](https://github.com/damiaojsilva2)<br/>[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/damiaojsilva/)](https://www.linkedin.com/in/damiaojsilva/) | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/157240964" width=90><br/><sub>Florencio Santos Junior</sub>](https://github.com/fasjunior2204)<br/>[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/florencio-santos-junior/)](https://www.linkedin.com/in/florencio-santos-junior/) | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/118402799" width=90><br/><sub>Marcial Genari</sub>](https://github.com/Genari22)<br/>[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marcial-genari-477a7824b/)](https://www.linkedin.com/in/marcial-genari-477a7824b/) |
