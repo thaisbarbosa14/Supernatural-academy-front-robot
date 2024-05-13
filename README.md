@@ -5,7 +5,6 @@ Projeto desenvolvido pela equipe Supernatural como parte do treinamento oferecid
 - Robot Framework;
 - Robot Framework SeleniumLibrary;
 - Robot Framework RequestsLibrary;
-- Python.
 
 ## Como Instalar as Tecnologias
 
