@@ -1,10 +1,11 @@
 # DESCRIÇÃO:
-Projeto desenvolvido pela equipe Supernatural como parte do treinamento oferecido pela Qa.Coders Academy, com o objetivo de aprimorar as habilidades práticas em automação de testes de API, com o GitHub Actions para realizar testes automatizados Robot Framework. Este README fornece informações sobre as tecnologias utilizadas, como instalá-las, como configurar o ambiente e como executar os testes.
+Projeto desenvolvido pela equipe Supernatural como parte do treinamento oferecido pela Qa.Coders Academy, com o objetivo de aprimorar as habilidades práticas em automação de testes WEB, com o GitHub Actions para realizar testes automatizados Robot Framework. Este README fornece informações sobre as tecnologias utilizadas, como instalá-las, como configurar o ambiente e como executar os testes.
 
 ## Tecnologias Utilizadas
 - Robot Framework;
 - Robot Framework SeleniumLibrary;
 - Robot Framework RequestsLibrary;
+  Python.
 
 ## Como Instalar as Tecnologias
 
