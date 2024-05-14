@@ -24,6 +24,8 @@ jobs:
           pip install robotframework-seleniumlibrary
           pip install robotframework-requests
           pip install robotframework-faker
+          pip install --upgrade setuptools
+
  
       - name: rodando os testes
         # run: echo Executando os testes de Web do Robot
