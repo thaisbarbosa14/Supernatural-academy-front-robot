@@ -1,0 +1,37 @@
+name: Teste Front-End com Robot - Board New
+
+on: push
+
+jobs: 
+  
+  test:
+    name: Board New
+    runs-on: windows-latest
+
+    steps:
+      - name: clone do projeto
+        uses: actions/checkout@v4
+
+      - name: configuração do python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalação de dependência
+        # run: echo Instalação das depedências do Projeto
+        run: |
+          pip install robotframework
+          pip install robotframework-seleniumlibrary
+          pip install robotframework-requests
+ 
+      - name: rodando os testes
+        # run: echo Executando os testes de Web do Robot
+        run: |
+          robot -d results Supernatural/Board-New
+          
+      - name: Salvando os resultados dos testes
+        uses: actions/upload-artifact@v4
+        with:
+          if: always()
+          name: resultado-testes
+          path: ./results
