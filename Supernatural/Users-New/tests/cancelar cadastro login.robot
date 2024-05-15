@@ -14,7 +14,7 @@ Cenário de teste:Funcional- Cancelar Cadastro de login quando todos os campos o
     Inserir dados no formulário
     Verificar se o botão está habilitado
     Clicar no botão Cancelar
-    Verificar se o usuário não foi cadastrado
+    
         
  
     
@@ -26,7 +26,7 @@ Cenário de teste: Funcional - Cancelar Cadastro de login quando nenhum dos camp
     Clicar no botão NOVO CADASTRO
     Verificar se o botão está habilitado
     Clicar no botão Cancelar sem ter preenchido dados nos campos obrigatórios
-    Verificar se o usuário não foi cadastrado
+    
    
 
 

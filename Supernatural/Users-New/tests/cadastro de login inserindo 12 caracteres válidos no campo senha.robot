@@ -10,7 +10,7 @@ Cenário de teste: Funcional - Validar cadastro de login inserindo 12 caracteres
     Clicar no menu Cadastros
     Clicar no menu Usuários
     Clicar no botão NOVO CADASTRO
-    Preencher os dados no formulário inserindo inserindo 12 caracteres válidos no campo senha
+    Preencher os dados no formulário inserindo 12 caracteres válidos no campo senha
     Verificar se o botão está habilitado
     Clicar no botão Salvar Novo
    

@@ -10,7 +10,7 @@ Cenário de teste: Não Funcional - Validar cadastro de login inserindo 7 caract
     Clicar no menu Cadastros
     Clicar no menu Usuários
     Clicar no botão NOVO CADASTRO
-    Preencher os dados no formulário inserindo inserindo 7 caracteres válidos no campo senha
+    Preencher os dados no formulário inserindo 7 caracteres válidos no campo senha
     Verificar se o botão está habilitado
     Clicar no botão Salvar Novo
     Verificar se será apresentada a mensagem referente a inconsistência

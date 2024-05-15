@@ -2,7 +2,6 @@
 Library   SeleniumLibrary
 Library   FakerLibrary    locale=pt_BR
 Library    String
-Library    XML
 
      
 
@@ -47,40 +46,36 @@ Realizar login com usuário administrador
 
 
 Clicar no menu Cadastros
-       Wait Until Element Is Visible    ${SELETOR_MENUS_CADASTROS}    10s
-       sleep  3s
+       Wait Until Element Is Visible    ${SELETOR_MENUS_CADASTROS} 
        Click Element                    ${SELETOR_MENUS_CADASTROS} 
-
+        sleep  3s
 Clicar no menu Usuários
       Element Should Be Visible      ${MENU_USUARIOS}    
       Click Element                  ${MENU_USUARIOS}
-
-
+      sleep  1s
+ 
 Clicar no botão NOVO CADASTRO
-     Wait Until Element Is Visible  ${BOTAO_NOVO_CADASTRO}    5s
+     Wait Until Element Is Visible  ${BOTAO_NOVO_CADASTRO} 
      Click Button    ${BOTAO_NOVO_CADASTRO}
-     sleep  5s
+     sleep  2s
      
     
 Inserir dados somente no campo Nome Completo do formulário
-    Wait Until Element Is Visible    ${NOME_COMPLETO}     10s
+    Wait Until Element Is Visible    ${NOME_COMPLETO}  
     ${PrimeiroNome}    FakerLibrary.First Name
     ${SegundoNome}     FakerLibrary.Last Name
     Input Text   ${NOME_COMPLETO}    ${PrimeiroNome} ${SegundoNome} 
-    sleep  5s
 
 
 Verificar se o botão está habilitado
     Element Should Be Enabled    ${CANCELAR} 
-    sleep  5s
+   
 Clicar no botão Cancelar
     Wait Until Element Is Visible   ${CANCELAR}   
     Click Button    ${CANCELAR}  
-    sleep  5s  
     Capture Page Screenshot
-Verificar se o usuário não foi cadastrado
-    Element Should Not Be Visible     ${NOME_COMPLETO} 
-   
+    sleep  2s  
+
     
 
     

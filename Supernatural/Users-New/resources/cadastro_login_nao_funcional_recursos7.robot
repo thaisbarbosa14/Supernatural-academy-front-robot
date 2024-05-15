@@ -23,8 +23,6 @@ ${CPF}                    id=cpf
 ${SENHA_NOVO_CADASTRO}     //input[contains(@type,'password')]
 ${CONFIRME_SENHA}         id:confirmPassword
 ${SALVAR}                 id=save
-${CANCELAR}               id=cancel
-${LOGOUT}                 class=css-1nvbq2d
 
 
 *** Keywords ***
@@ -47,43 +45,38 @@ Realizar login com usuário administrador
 
 
 Clicar no menu Cadastros
-       Wait Until Element Is Visible    ${SELETOR_MENUS_CADASTROS}    10s
+       Wait Until Element Is Visible    ${SELETOR_MENUS_CADASTROS}  
        sleep  3s
        Click Element                    ${SELETOR_MENUS_CADASTROS} 
 
 Clicar no menu Usuários
       Element Should Be Visible      ${MENU_USUARIOS}    
       Click Element                  ${MENU_USUARIOS}
-
+        sleep  1s
 
 Clicar no botão NOVO CADASTRO
-     Wait Until Element Is Visible  ${BOTAO_NOVO_CADASTRO}    5s
-     sleep  5
+     Wait Until Element Is Visible  ${BOTAO_NOVO_CADASTRO}  
+     sleep  2s
      Click Button    ${BOTAO_NOVO_CADASTRO}
      
     
 Preencher todos os campos do formulário exceto o campo E-mail
-    Wait Until Element Is Visible    ${NOME_COMPLETO}     10s
+    Wait Until Element Is Visible    ${NOME_COMPLETO} 
     ${PrimeiroNome}    FakerLibrary.First Name
     ${SegundoNome}     FakerLibrary.Last Name
     Input Text   ${NOME_COMPLETO}    ${PrimeiroNome} ${SegundoNome} 
-    sleep  1s
-
 
     Input Text    ${PERFIL_ACESSO}       ADMIN
-    sleep  1s
 
     ${GeraCPF}     Random Number    digits=11
     Input Text     ${CPF}       ${GeraCPF}  
-    sleep  1s
 
     ${NovaSenha}   Generate Random String  length=6
     Input Text    ${SENHA_NOVO_CADASTRO}     ${NovaSenha}@1Est
     Log    Senha Gerada: ${NovaSenha}
-    sleep  1s
 
     Input Text    ${CONFIRME_SENHA}       ${NovaSenha}@1Est
-    sleep  10s
+  
 
 
 Verificar se o botão está habilitado
@@ -92,7 +85,7 @@ Clicar no botão Salvar Novo
     Wait Until Element Is Visible    ${SALVAR} 
     Element Should Be Enabled      ${SALVAR} 
     Click Element    ${SALVAR}
-    sleep  3s
+    sleep  2s
 
 Verificar se será apresentada a mensagem informando que o campo e-mail é obrigatório
     Page Should Contain    O campo email é obrigatório

@@ -23,8 +23,7 @@ ${CPF}                    id=cpf
 ${SENHA_NOVO_CADASTRO}     //input[contains(@type,'password')]
 ${CONFIRME_SENHA}         id:confirmPassword
 ${SALVAR}                 id=save
-${CANCELAR}               id=cancel
-${LOGOUT}                 class=css-1nvbq2d
+
 
 
 *** Keywords ***
@@ -47,46 +46,43 @@ Realizar login com usuário administrador
 
 
 Clicar no menu Cadastros
-       Wait Until Element Is Visible    ${SELETOR_MENUS_CADASTROS}    10s
-       sleep  3s
+       Wait Until Element Is Visible    ${SELETOR_MENUS_CADASTROS} 
        Click Element                    ${SELETOR_MENUS_CADASTROS} 
+       sleep  3s        
 
 Clicar no menu Usuários
       Element Should Be Visible      ${MENU_USUARIOS}    
       Click Element                  ${MENU_USUARIOS}
+      sleep  2s
 
 
 Clicar no botão NOVO CADASTRO
-     Wait Until Element Is Visible  ${BOTAO_NOVO_CADASTRO}    5s
-     sleep  5
+     Wait Until Element Is Visible  ${BOTAO_NOVO_CADASTRO}  
      Click Button    ${BOTAO_NOVO_CADASTRO}
+     sleep  2s
      
     
-Preencher os dados no formulário inserindo inserindo 7 caracteres válidos no campo senha
-    Wait Until Element Is Visible    ${NOME_COMPLETO}     10s
+Preencher os dados no formulário inserindo 7 caracteres válidos no campo senha
+    Wait Until Element Is Visible    ${NOME_COMPLETO}     
     ${PrimeiroNome}    FakerLibrary.First Name
     ${SegundoNome}     FakerLibrary.Last Name
     Input Text   ${NOME_COMPLETO}    ${PrimeiroNome} ${SegundoNome} 
-    sleep  1s
 
 
     ${NovoCadastroEmail}  FakerLibrary.Email
     Input Text    ${EMAIL_NOVO_CADASTRO}     ${NovoCadastroEmail}
-    sleep  1s
+
 
     Input Text    ${PERFIL_ACESSO}       ADMIN
-    sleep  1s
+    
 
     ${GeraCPF}     Random Number    digits=11
     Input Text     ${CPF}       ${GeraCPF}  
-    sleep  1s
-
+   
+    Input Text    ${SENHA_NOVO_CADASTRO}    Aaman1@
     
-     Input Text    ${SENHA_NOVO_CADASTRO}    Aaman1@
-     sleep  1s
-
     Input Text    ${CONFIRME_SENHA}       Aaman1@
-    sleep  10s
+    
 
 
 Verificar se o botão está habilitado
@@ -95,7 +91,7 @@ Clicar no botão Salvar Novo
     Wait Until Element Is Visible    ${SALVAR} 
     Element Should Be Enabled      ${SALVAR} 
     Click Element    ${SALVAR}
-    sleep  5s
+    sleep  2s
     
 
 Verificar se será apresentada a mensagem referente a inconsistência
