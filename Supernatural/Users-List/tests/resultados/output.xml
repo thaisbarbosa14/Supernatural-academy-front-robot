@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-05T21:49:48.542941" rpa="false" schemaversion="5">
+<suite id="s1" name="Testes Qacoders" source="C:\Testes\SupernaturalFrontRobotFramework1\tests\testes_qacoders.robot">
+<test id="s1-t1" name="Cenário de teste: Listar usuarios" line="6">
+<kw name="Passo 1 - Acessar a pagina de login automacao qacoders">
+<msg time="2024-04-05T21:49:48.655172" level="FAIL">No keyword with name 'Passo 1 - Acessar a pagina de login automacao qacoders' found. Did you mean:
+    testes_recursos_qacoders.Abrir o navegadorPasso 1 - Acessar a pagina de login automacao qacoders</msg>
+<status status="FAIL" start="2024-04-05T21:49:48.655172" elapsed="0.000000">No keyword with name 'Passo 1 - Acessar a pagina de login automacao qacoders' found. Did you mean:
+    testes_recursos_qacoders.Abrir o navegadorPasso 1 - Acessar a pagina de login automacao qacoders</status>
+</kw>
+<status status="FAIL" start="2024-04-05T21:49:48.654096" elapsed="0.001076">No keyword with name 'Passo 1 - Acessar a pagina de login automacao qacoders' found. Did you mean:
+    testes_recursos_qacoders.Abrir o navegadorPasso 1 - Acessar a pagina de login automacao qacoders</status>
+</test>
+<status status="FAIL" start="2024-04-05T21:49:48.544443" elapsed="0.111726"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testes Qacoders">Testes Qacoders</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
