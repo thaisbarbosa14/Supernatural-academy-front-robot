@@ -23,7 +23,7 @@ ${CPF}                    id=cpf
 ${SENHA_NOVO_CADASTRO}     //input[contains(@type,'password')]
 ${CONFIRME_SENHA}         id:confirmPassword
 ${SALVAR}                 id=save
-${MENSAGEM_PRIMEIRO_NOME}   Informe o nome e sobrenome com as iniciais em letra maiúscula e sem caracteres especiais.
+
 
 
 *** Keywords ***
@@ -47,9 +47,8 @@ Realizar login com usuário administrador
 
 Clicar no menu Cadastros
        Wait Until Element Is Visible    ${SELETOR_MENUS_CADASTROS} 
-       sleep  3s   
        Click Element                    ${SELETOR_MENUS_CADASTROS}
-       sleep  1s
+       sleep  2s
             
 Clicar no menu Usuários
       Element Should Be Visible      ${MENU_USUARIOS}    
@@ -58,43 +57,38 @@ Clicar no menu Usuários
 
 Clicar no botão NOVO CADASTRO
      Wait Until Element Is Visible  ${BOTAO_NOVO_CADASTRO}  
-     sleep  5  
      Click Button    ${BOTAO_NOVO_CADASTRO}
-      sleep  1s
+      sleep  2s
      
     
 Preencher todos os campos do formulário e inserir no campo Nome Completo somente o primeiro nome
-    Wait Until Element Is Visible    ${NOME_COMPLETO}     10s
+    Wait Until Element Is Visible    ${NOME_COMPLETO}  
     Input Text   ${NOME_COMPLETO}  Paulo  
-    sleep  1s
-
 
     ${NovoCadastroEmail}  FakerLibrary.Email
     Input Text    ${EMAIL_NOVO_CADASTRO}     ${NovoCadastroEmail}
-    sleep  1s
-
+ 
     Input Text    ${PERFIL_ACESSO}       ADMIN
-    sleep  1s
-
+    
     ${GeraCPF}     Random Number    digits=11
     Input Text     ${CPF}       ${GeraCPF}  
-    sleep  1s
+  
 
     ${NovaSenha}   Generate Random String  length=6
     Input Text    ${SENHA_NOVO_CADASTRO}     ${NovaSenha}@1Est
     Log    Senha Gerada: ${NovaSenha}
-    sleep  1s
+    
 
     Input Text    ${CONFIRME_SENHA}       ${NovaSenha}@1Est
-    sleep  10s
+ 
 
 
 Verificar se o botão está habilitado
     Element Should Be Enabled      ${SALVAR} 
 Clicar no botão Salvar Novo
-    Wait Until Element Is Visible    ${SALVAR}   10s
+    Wait Until Element Is Visible    ${SALVAR} 
     Click Element    ${SALVAR}
-    sleep  5s
+    sleep  2s
     
 Verificar se será apresentada a mensagem informando que é necessário inserir o sobrenome  
     Page Should Contain    Informe o nome e sobrenome com as iniciais em letra maiúscula e sem caracteres especiais.

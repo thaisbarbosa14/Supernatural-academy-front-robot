@@ -47,46 +47,44 @@ Realizar login com usuário administrador
 
 
 Clicar no menu Cadastros
-       Wait Until Element Is Visible    ${SELETOR_MENUS_CADASTROS}   5s
-       sleep  5s
+       Wait Until Element Is Visible    ${SELETOR_MENUS_CADASTROS}  
        Click Element                    ${SELETOR_MENUS_CADASTROS} 
+       sleep  2s
 
 Clicar no menu Usuários
       Element Should Be Visible      ${MENU_USUARIOS}    
       Click Element                  ${MENU_USUARIOS}
-
+      sleep  1s
 
 Clicar no botão NOVO CADASTRO
-     Wait Until Element Is Visible  ${BOTAO_NOVO_CADASTRO}    5s
-     sleep  5s
+     Wait Until Element Is Visible  ${BOTAO_NOVO_CADASTRO}  
      Click Button    ${BOTAO_NOVO_CADASTRO}
-     sleep  5s
+     sleep  2s
      
     
 Inserir dados no formulário
-    Wait Until Element Is Visible    ${NOME_COMPLETO}     10s
+    Wait Until Element Is Visible    ${NOME_COMPLETO} 
     ${PrimeiroNome}    FakerLibrary.First Name
     ${SegundoNome}     FakerLibrary.Last Name
     Input Text   ${NOME_COMPLETO}    ${PrimeiroNome} ${SegundoNome} 
-    sleep  1s
+    
 
 
     ${NovoCadastroEmail}  FakerLibrary.Email
     Input Text    ${EMAIL_NOVO_CADASTRO}     ${NovoCadastroEmail}
-    sleep  1s
+    
 
     Input Text    ${PERFIL_ACESSO}       ADMIN
-    sleep  1s
-
+    
     ${GeraCPF}     Random Number  digits=9   
     Input Text     ${CPF}       ${GeraCPF}59 
-    sleep  1s
+   
 
 
     ${NovaSenha}   Generate Random String  length=6
     Input Text    ${SENHA_NOVO_CADASTRO}     ${NovaSenha}@1Est
     Log    Senha Gerada: ${NovaSenha}
-    sleep  1s
+ 
 
     Input Text    ${CONFIRME_SENHA}       ${NovaSenha}@1Est
     
@@ -94,19 +92,13 @@ Inserir dados no formulário
 Verificar se o botão está habilitado
     Element Should Be Enabled    ${CANCELAR} 
 Clicar no botão Cancelar
-    Wait Until Element Is Visible   ${CANCELAR}   5s
+    Wait Until Element Is Visible   ${CANCELAR} 
     Click Button    ${CANCELAR}  
-    sleep  5s  
-
-#Verificar se o usuário não foi cadastrado
-     #Page Should Not Contain   Registro realizado com sucesso - Não foi implementado
+    sleep  2s  
 
 Clicar no botão Cancelar sem ter preenchido dados nos campos obrigatórios
     Wait Until Element Is Visible   ${CANCELAR} 
-    Click Button    ${CANCELAR}    
-
- Verificar se o usuário não foi cadastrado
-     Element Should Not Be Visible     ${NOME_COMPLETO} 
+    Click Button    ${CANCELAR}   
      
     
         

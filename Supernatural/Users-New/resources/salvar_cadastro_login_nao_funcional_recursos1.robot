@@ -23,8 +23,6 @@ ${CPF}                    id=cpf
 ${SENHA_NOVO_CADASTRO}     //input[contains(@type,'password')]
 ${CONFIRME_SENHA}         id:confirmPassword
 ${SALVAR}                 id=save
-${CANCELAR}               id=cancel
-${LOGOUT}                 class=css-1nvbq2d
 
 
 *** Keywords ***
@@ -47,20 +45,18 @@ Realizar login com usuário administrador
 
 
 Clicar no menu Cadastros
-       Wait Until Element Is Visible    ${SELETOR_MENUS_CADASTROS}    10s
-       sleep  3s
+       Wait Until Element Is Visible    ${SELETOR_MENUS_CADASTROS}  
        Click Element                    ${SELETOR_MENUS_CADASTROS} 
-
+       sleep  3s
 Clicar no menu Usuários
       Element Should Be Visible      ${MENU_USUARIOS}    
       Click Element                  ${MENU_USUARIOS}
-
+      sleep  1s
 
 Clicar no botão NOVO CADASTRO
-     Wait Until Element Is Visible  ${BOTAO_NOVO_CADASTRO}    5s
-     sleep  5
+     Wait Until Element Is Visible  ${BOTAO_NOVO_CADASTRO} 
      Click Button    ${BOTAO_NOVO_CADASTRO}
-     
+     sleep  2s
 
 Verificar se o botão está habilitado
     Element Should Be Enabled      ${SALVAR} 
@@ -68,7 +64,7 @@ Clicar no botão Salvar Novo
     Wait Until Element Is Visible    ${SALVAR} 
     Element Should Be Enabled      ${SALVAR} 
     Click Element    ${SALVAR}
-    sleep  5s
+    sleep  2s
     
 Verificar se será apresentada a mensagem de obrigatoriedade dos campos
      Page Should Contain    O campo nome completo é obrigatório

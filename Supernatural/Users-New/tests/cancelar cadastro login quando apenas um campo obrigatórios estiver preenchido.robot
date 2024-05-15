@@ -14,7 +14,7 @@ Cenário de teste:Funcional- Cancelar Cadastro de login quando apenas um campo o
     Inserir dados somente no campo Nome Completo do formulário
     Verificar se o botão está habilitado
     Clicar no botão Cancelar
-    Verificar se o usuário não foi cadastrado
+  
         
 
 

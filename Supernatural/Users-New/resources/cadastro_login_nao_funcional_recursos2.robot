@@ -47,19 +47,19 @@ Realizar login com usuário administrador
 
 
 Clicar no menu Cadastros
-       Wait Until Element Is Visible    ${SELETOR_MENUS_CADASTROS}    10s
-       sleep  3s
+       Wait Until Element Is Visible    ${SELETOR_MENUS_CADASTROS}   
+       sleep  2s
        Click Element                    ${SELETOR_MENUS_CADASTROS} 
 
 Clicar no menu Usuários
-      Wait Until Element Is Visible    ${MENU_USUARIOS}  10s
-      sleep  3s  
+      Wait Until Element Is Visible    ${MENU_USUARIOS}  
+      sleep  2s  
       Click Element                    ${MENU_USUARIOS}
 
 
 Clicar no botão NOVO CADASTRO
-     Wait Until Element Is Visible  ${BOTAO_NOVO_CADASTRO}    10s
-     sleep  5
+     Wait Until Element Is Visible  ${BOTAO_NOVO_CADASTRO}   
+     sleep  2s
      Click Button    ${BOTAO_NOVO_CADASTRO}
      
     
@@ -67,22 +67,22 @@ Preencher todos os campos do formulário exceto o campo Nome Completo
     
     ${NovoCadastroEmail}  FakerLibrary.Email
     Input Text    ${EMAIL_NOVO_CADASTRO}     ${NovoCadastroEmail}
-    sleep  1s
+  
 
     Input Text    ${PERFIL_ACESSO}       ADMIN
-    sleep  1s
+    
 
     ${GeraCPF}     Random Number    digits=11
     Input Text     ${CPF}       ${GeraCPF}  
-    sleep  1s
+    
 
     ${NovaSenha}   Generate Random String  length=6
     Input Text    ${SENHA_NOVO_CADASTRO}     ${NovaSenha}@1Est
     Log    Senha Gerada: ${NovaSenha}
-    sleep  1s
+
 
     Input Text    ${CONFIRME_SENHA}       ${NovaSenha}@1Est
-    sleep  10s
+   
 
 
 Verificar se o botão está habilitado
@@ -91,7 +91,7 @@ Clicar no botão Salvar Novo
     Wait Until Element Is Visible    ${SALVAR} 
     Element Should Be Enabled      ${SALVAR} 
     Click Element    ${SALVAR}
-    sleep  5s
+    sleep  2s
 
 Verificar se será apresentada a mensagem informando que o campo Nome Completo é inválido
     Page Should Contain    O campo nome completo é obrigatório
