@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-15T15:07:57.322508" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\PROJETOS\RobotFramework\FRONT\TestesDeFrontRobotFramework\test">
+<suite id="s1-s1" name="Testes Academy" source="C:\PROJETOS\RobotFramework\FRONT\TestesDeFrontRobotFramework\test\testes_academy.robot">
+<test id="s1-s1-t1" name="Cenário de teste - Listar Diretorias" line="8">
+<kw name="Abrir o Navegador" owner="testes_recursos_academy" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-15T15:07:59.716664" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-15T15:07:59.716664" elapsed="8.934740"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-15T15:08:08.651404" elapsed="0.264720"/>
+</kw>
+<status status="PASS" start="2024-05-15T15:07:59.691710" elapsed="9.224414"/>
+</kw>
+<kw name="Passo 1- Acessar a pagina de login Q.a Coders Academy" owner="testes_recursos_academy">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-15T15:08:08.917166" level="INFO">Opening url 'https://automacao.qacoders-academy.com.br/login'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-15T15:08:08.917166" elapsed="10.191270"/>
+</kw>
+<status status="PASS" start="2024-05-15T15:08:08.917166" elapsed="10.191270"/>
+</kw>
+<kw name="Passo 2 - Digitar email do admin" owner="testes_recursos_academy">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${emailInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-15T15:08:19.108436" elapsed="1.540867"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-15T15:08:20.649303" level="INFO">Typing text 'sysadmin@qacoders.com' into text field '//input[contains(@type,'text')]'.</msg>
+<arg>locator=${emailInput}</arg>
+<arg>text=sysadmin@qacoders.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T15:08:20.649303" elapsed="3.799913"/>
+</kw>
+<status status="PASS" start="2024-05-15T15:08:19.108436" elapsed="5.340780"/>
+</kw>
+<kw name="Passo 3 - Digitar senha do admin" owner="testes_recursos_academy">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${senhaInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-15T15:08:24.449216" elapsed="0.023307"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-15T15:08:24.473528" level="INFO">Typing password into text field '//input[contains(@type,'password')]'.</msg>
+<msg time="2024-05-15T15:08:24.530619" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${senhaInput}</arg>
+<arg>password=1234@Test</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T15:08:24.472523" elapsed="0.193630"/>
+</kw>
+<status status="PASS" start="2024-05-15T15:08:24.449216" elapsed="0.216937"/>
+</kw>
+<kw name="Passo 4 - Clicar em entrar" owner="testes_recursos_academy">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${entrarButtom}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-15T15:08:24.666487" elapsed="0.017004"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-15T15:08:24.683491" level="INFO">Clicking button '//button[contains(.,'Entrar')]'.</msg>
+<arg>locator=${entrarButtom}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T15:08:24.683491" elapsed="0.983843"/>
+</kw>
+<status status="PASS" start="2024-05-15T15:08:24.666487" elapsed="1.000847"/>
+</kw>
+<kw name="Passo 5 - Clicar no Menu Cadastro" owner="testes_recursos_academy">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${cadastroMenu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-15T15:08:25.669713" elapsed="2.673423"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T15:08:28.343136" level="INFO">Clicking element 'id:Cadastros'.</msg>
+<arg>locator=${cadastroMenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T15:08:28.343136" elapsed="0.054684"/>
+</kw>
+<status status="PASS" start="2024-05-15T15:08:25.669713" elapsed="2.728107"/>
+</kw>
+<kw name="Passo 6 - Clicar no SubMenu Diretorias" owner="testes_recursos_academy">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${diretoriaSubmenu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-15T15:08:28.397820" elapsed="0.047426"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-15T15:08:31.508357" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-15T15:08:28.445246" elapsed="3.063111"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-15T15:08:31.508357" level="INFO">Clicking element '//span[contains(.,'Diretorias')]'.</msg>
+<arg>locator=${diretoriaSubmenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-15T15:08:31.508357" elapsed="0.103638"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-15T15:08:34.614275" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-15T15:08:31.612979" elapsed="3.001296"/>
+</kw>
+<status status="PASS" start="2024-05-15T15:08:28.397820" elapsed="6.216455"/>
+</kw>
+<kw name="Validar se foi direcionado para a Página de listagem de diretoria" owner="testes_recursos_academy">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-15T15:08:34.758393" level="INFO">Current location is 'https://automacao.qacoders-academy.com.br/board'.</msg>
+<arg>url=${urlDiretoria}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-05-15T15:08:34.615874" elapsed="0.142519"/>
+</kw>
+<status status="PASS" start="2024-05-15T15:08:34.615874" elapsed="0.142519"/>
+</kw>
+<kw name="Fechar o Navegador" owner="testes_recursos_academy" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-15T15:08:34.758393" elapsed="3.211954"/>
+</kw>
+<status status="PASS" start="2024-05-15T15:08:34.758393" elapsed="3.211954"/>
+</kw>
+<status status="PASS" start="2024-05-15T15:07:59.691710" elapsed="38.278637"/>
+</test>
+<status status="PASS" start="2024-05-15T15:07:57.400893" elapsed="40.569454"/>
+</suite>
+<status status="PASS" start="2024-05-15T15:07:57.338190" elapsed="40.632157"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Testes Academy">Test.Testes Academy</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
